@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Rodrigo Silva",
+    "cpf": "01138498009",
+    "status": 1,
+    "checking-accounts": [
+      {
+        "id": 1,
+        "number": "557932-4"
+      }
+    ],
+    "investment-accounts": [
+      {
+        "id": 1,
+        "number": "778461-8"
+      }
+    ]
+  }
+]
