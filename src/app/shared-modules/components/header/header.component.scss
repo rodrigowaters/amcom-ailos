@@ -1,0 +1,41 @@
+:host {
+  background-color: #FFFFFF;
+  height: 70px;
+  display: flex;
+  padding: 9px 14px;
+
+  .header-description {
+    flex: 1;
+
+    h1 {
+      color: #101213;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        color: #787878;
+        font-weight: 400;
+        font-size: 12px;
+
+        & + li:before {
+          padding: 8px;
+          content: "/\00a0";
+        }
+      }
+    }
+
+  }
+
+  .header-actions {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 14px;
+  }
+}

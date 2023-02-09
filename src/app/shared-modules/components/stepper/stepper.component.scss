@@ -1,0 +1,38 @@
+.stepper {
+  display: flex;
+  justify-content: center;
+  margin: 22px 0;
+
+
+  .step-container {
+    display: flex;
+    align-items: center;
+
+    .step-line {
+      width: 100px;
+      height: 2px;
+      background-color: #ddd;
+      position: relative;
+      margin-top: -22px;
+    }
+
+    .step-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #165C7D;
+
+      span {
+        color: #D0DEE5;
+      }
+
+      &.active {
+        span {
+          color: #125D79;
+        }
+      }
+    }
+  }
+}

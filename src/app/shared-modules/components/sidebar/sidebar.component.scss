@@ -1,0 +1,44 @@
+:host {
+  width: 54px;
+  background-color: #165C7D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logo {
+    margin: 22px 0;
+    width: 38px;
+    height: 38px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .cta-menu {
+    margin: 6px 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: #949799;
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      margin: 18px 0;
+
+      span {
+        color: #FFFFFF;
+      }
+    }
+  }
+}

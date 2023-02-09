@@ -1,0 +1,70 @@
+<app-stepper></app-stepper>
+<article>
+  <app-title text="Informe o CPF do futuro cooperado (a)"></app-title>
+  <app-subtitle text="Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente."></app-subtitle>
+  <app-subtitle text="Digite apenas os números (sem pontos ou traços)."></app-subtitle>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <mat-label>CPF</mat-label>
+          <input id="customerCPF" name="customerCPF" formControlName="customerCPF" matInput required maxlength="11" (ngModelChange)="clearCustomerData()">
+          <mat-error *ngIf="form.controls.customerCPF.errors?.validCPF">CPF Inválido</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <button mat-raised-button color="primary" [disabled]="this.customer$ !== null">
+          Consultar por CPF
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+  <section *ngIf="this.customer$">
+    <app-card title="Situação cadastral do CPF" subtitle="Consulta na Receita Federal">
+      <mat-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>person</mat-icon>
+          <h4 mat-line>Nome</h4>
+          <p mat-line>{{this.customer$.name}}</p>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>check_circle</mat-icon>
+          <h4 mat-line>Situação do CPF</h4>
+          <p mat-line>{{getDescriptionByStatusCode(this.customer$.status)}}</p>
+        </mat-list-item>
+      </mat-list>
+    </app-card>
+    <app-card title="Conta aplicação" subtitle="Cooperativa Viacredi">
+      <mat-list>
+        <mat-list-item *ngFor="let account of this.customer$.checkingAccounts">
+          <mat-icon mat-list-icon>credit_card</mat-icon>
+          <h4 mat-line>Número da conta</h4>
+          <p mat-line>{{account.number}}</p>
+        </mat-list-item>
+      </mat-list>
+      <button mat-button color="primary">Duplicar conta</button>
+    </app-card>
+    <app-card title="Conta corrente" subtitle="Cooperativa Viacredi">
+      <mat-list>
+        <mat-list-item *ngFor="let account of this.customer$.investmentAccounts">
+          <mat-icon mat-list-icon>credit_card</mat-icon>
+          <h4 mat-line>Número da conta</h4>
+          <p mat-line>{{account.number}}</p>
+        </mat-list-item>
+      </mat-list>
+      <button mat-button color="primary">Duplicar conta</button>
+    </app-card>
+  </section>
+
+</article>
+<app-footer>
+  <button mat-raised-button color="primary">
+    Iniciar nova admissão
+  </button>
+  <button mat-raised-button color="accent">
+    Dicas para admissão
+  </button>
+</app-footer>

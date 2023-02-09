@@ -1,0 +1,39 @@
+html, body {
+  height: 100vh;
+
+  * {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  app-root {
+    display: flex;
+
+    form {
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .col {
+          &:nth-child(2n) {
+            margin-left: 8px;
+          }
+        }
+      }
+    }
+
+    .mat-accent{
+      &.mat-fab,
+      &.mat-flat-button,
+      &.mat-mini-fab,
+      &.mat-raised-button{
+        background-color: #FFFFFF;
+        color: #165C7D;
+        border: 1px solid #165C7D;
+        box-shadow: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<app-stepper></app-stepper>
+<article>
+  <app-title text="Informe o CPF do futuro cooperado (a)"></app-title>
+  <app-subtitle text="Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente."></app-subtitle>
+  <app-subtitle text="Digite apenas os números (sem pontos ou traços)."></app-subtitle>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <mat-label>CPF</mat-label>
+          <input id="customerCPF" name="customerCPF" formControlName="customerCPF" matInput required maxlength="11">
+          <mat-error *ngIf="form.controls.customerCPF.errors?.validCPF">CPF Inválido</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <button mat-raised-button color="primary">
+          Consultar por CPF
+        </button>
+      </div>
+    </div>
+
+  </form>
+</article>
+<app-footer>
+  <button mat-raised-button color="primary">
+    Dicas para admissão
+  </button>
+</app-footer>

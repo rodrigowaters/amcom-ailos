@@ -1,0 +1,9 @@
+<div class="header-description">
+  <h1>{{title}}</h1>
+  <ul>
+    <li *ngFor="let node of nodes">{{node}}</li>
+  </ul>
+</div>
+<div class="header-actions">
+  <ng-content></ng-content>
+</div>
