@@ -40,6 +40,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "/",
+              "deployUrl": "https://rodrigowaters.github.io/amcom-ailos/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
