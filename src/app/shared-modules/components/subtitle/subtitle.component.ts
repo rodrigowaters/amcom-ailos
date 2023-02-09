@@ -9,7 +9,8 @@ export class SubtitleComponent implements OnInit {
 
   @Input() text: string;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

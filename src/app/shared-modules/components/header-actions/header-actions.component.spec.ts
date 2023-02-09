@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { HeaderActionsComponent } from './header-actions.component';
+import {HeaderActionsComponent} from './header-actions.component';
 
 describe('HeaderActionsComponent', () => {
   let component: HeaderActionsComponent;
@@ -8,9 +8,9 @@ describe('HeaderActionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderActionsComponent ]
+      declarations: [HeaderActionsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

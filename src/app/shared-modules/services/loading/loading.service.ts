@@ -8,7 +8,8 @@ import {LoaderComponent} from "../../components/loader/loader.component";
 export class LoadingService {
   private dialogRef: MatDialogRef<LoaderComponent>;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {
+  }
 
   public show(): void {
     this.dialogRef = this.dialog.open(LoaderComponent, {

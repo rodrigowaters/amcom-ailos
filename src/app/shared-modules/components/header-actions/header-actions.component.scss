@@ -1,4 +1,4 @@
-:host{
+:host {
   display: flex;
   align-items: center;
 
@@ -10,12 +10,12 @@
     height: 32px;
     width: 32px;
 
-    span.material-symbols-outlined{
+    span.material-symbols-outlined {
       color: #125D79;
 
     }
 
-    .badge{
+    .badge {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -32,7 +32,7 @@
     }
   }
 
-  div.text-outlined{
+  div.text-outlined {
     margin: 0 32px;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
     font-size: 14px;
   }
 
-  .avatar{
+  .avatar {
     height: 32px;
     width: 32px;
     position: relative;
@@ -54,15 +54,15 @@
     border-radius: 50%;
     background-color: #E7EEF1;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
 
-    span{
+    span {
       color: #125D79;
-      position:absolute;
+      position: absolute;
       right: -8px;
       bottom: -8px;
     }
